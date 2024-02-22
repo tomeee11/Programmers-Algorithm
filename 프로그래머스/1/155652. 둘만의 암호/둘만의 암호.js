@@ -3,10 +3,11 @@ function solution(strings, skip, index) {
   
   const alphabet = Array.from('abcdefghijklmnopqrstuvwxyz').filter(char => !skip.includes(char));
 
-  for (const s of strings) {
-    const idx = (alphabet.indexOf(s) + index) % alphabet.length;
-    answer += alphabet[idx];
-  }
+//   for (const s of strings) {
+//     const idx = (alphabet.indexOf(s) + index) % alphabet.length;
+//     answer += alphabet[idx];
+//   }
 
-  return answer;
+  return strings.split("").map((v) => alphabet[(alphabet.indexOf(v) + index) % alphabet.length]).join("");
+
 }
