@@ -1,5 +1,3 @@
 function solution(s) {
-    return s.split(' ').map(word => {
-        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-    }).join(' ');
+    return s.split(" ").map((v)=>v.charAt(0).toUpperCase()+v.slice(1).toLowerCase()).join(" ");
 }
